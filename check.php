@@ -37,8 +37,8 @@ $conn = new mysqli('localhost','admin','123583','kz');
 
   echo 'Подключение к базе данных.<br>';
 
-$conn->query("INSERT INTO `users` (`fio`,`login`, `pass`, `pass2`, `email`, `phone`)
-VALUES('$fio', '$login', '$pass', '$pass2', '$email', '$phone')");
+$conn->query("INSERT INTO `users` (`name`,`login`, `pass`, `pass2`, `email`, `phone`)
+VALUES('$name', '$login', '$pass', '$pass2', '$email', '$phone')");
 $conn->close();
 header('Location: /');
 ?>
