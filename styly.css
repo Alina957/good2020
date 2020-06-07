@@ -1,0 +1,41 @@
+form{
+    width: 500px;
+    padding: 15px;
+    margin: 15px auto;
+}
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 100px;
+}
+
+
+.field {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #cccccc;
+}
+.excel {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+.snakeBody {
+    background: url("тело змейки1.png");
+    background-size: cover;
+    border-radius: 50%;
+}
+.head {
+    background: url("голова змейки.png");
+    background-size: cover;
+    border-radius: 10%;
+}
+.mouse {
+    background: url("тело мыши.png");
+    background-size: cover;
+}
+
