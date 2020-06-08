@@ -40,7 +40,7 @@ $conn = new mysqli('localhost','alinamust','123583','kuxko');
 $conn->query("INSERT INTO `users` (`name`,`login`, `pass`, `pass2`, `email`, `phone`)
 VALUES('$name', '$login', '$pass', '$pass2', '$email', '$phone')");
 $conn->close();
-header('Location: /');
+header('Location: index.php');
 ?>
 
 
