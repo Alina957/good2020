@@ -8,7 +8,7 @@ $passWORD = $_POST['password'];
 
  $mysql = new mysqli('localhost','alinamust','123583','kuxko');
 
- $result = $mysql->query("SELECT*FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'");
+ $result = $mysql->query("SELECT*FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
  $user = $result->fetch_assoc();
  if (count($user) == 0) { //oшибка: count(): Parameter must be an array or an object that implements
  echo "Пользователь не найден";
