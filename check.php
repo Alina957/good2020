@@ -4,12 +4,13 @@
     $email= $_POST['email'];
     $password= $_POST['password'];
     $password2=$_POST['password2'];
-    $conn = new mysqli('localhost','alinamust','123583','kuxko');
-    $result = $conn->query("SELECT*FROM `users` WHERE `login` = '$login'");
-       $user = $result->fetch_assoc();
-    $conn = new mysqli('localhost','admin','123583','kz');
-    $resuld = $conn->query("SELECT*FROM `users` WHERE `pass` = '$pass'");
-      $users = $resuld->fetch_assoc();
+ $mysql = new mysqli('localhost','alinamust','123583','kuxko');
+ $result = $mysql->query("SELECT*FROM `users` WHERE `login` = '$login'");
+             $user = $result->fetch_assoc();
+ $mysql = new mysqli('localhost','alinamust','123583','kuxko');
+ $resuld = $mysql->query("SELECT*FROM `users` WHERE `password` = '$password'");
+             $users = $resuld->fetch_assoc();
+
 
     if (mb_strlen($login)<5 || mb_strlen($login)>90){
     echo"Длина логина не корректна";
@@ -28,18 +29,11 @@
     $password=md5($password."qwerty11");
     $password2=md5($password."qwerty11");
 
+$mysql = new mysqli('localhost','alinamust','123583','kuxko');
+$mysql->query("INSERT INTO `users` (`name`,`login`,`email`, `password`, `password2`)
+VALUES('$name', '$login', '$email','$password', '$password2')");
+$mysql->close();
 
-$conn = new mysqli('localhost','alinamust','123583','kuxko');
-
-  if ($conn->connect_error) {
-    die("Ошибка: не удается подключиться: " . $conn->connect_error);
-  }
-
-  echo 'Подключение к базе данных.<br>';
-
-$conn->query("INSERT INTO `users` (`name`,`login`, `pass`, `pass2`, `email`, `phone`)
-VALUES('$name', '$login', '$pass', '$pass2', '$email', '$phone')");
-$conn->close();
 header('Location: index.php');
 ?>
 

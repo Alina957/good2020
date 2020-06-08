@@ -1,11 +1,9 @@
 <?php
-$login = filter_var(trim($_POST['login']),
-FILTER_SANITIZE_STRING);
-$pass = filter_var(trim($_POST['pass']),
-FILTER_SANITIZE_STRING);
+$login = $_POST['login'];
+$passWORD = $_POST['password'];
 
- $pass = md5($pass."qwerty11");
- $pass2 = md5($pass2."qwerty11");
+ $password = md5($password."qwerty11");
+ $password2 = md5($password2."qwerty11");
 
 
  $mysql = new mysqli('localhost','alinamust','123583','kuxko');
