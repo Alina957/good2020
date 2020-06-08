@@ -8,7 +8,7 @@ FILTER_SANITIZE_STRING);
  $pass2 = md5($pass2."qwerty11");
 
 
- $mysql = new mysqli('localhost','alina','123583','kz');
+ $mysql = new mysqli('localhost','alinamust','123583','kuxko');
 
  $result = $mysql->query("SELECT*FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'");
  $user = $result->fetch_assoc();

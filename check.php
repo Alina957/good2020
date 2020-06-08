@@ -4,7 +4,7 @@
     $email= $_POST['email'];
     $password= $_POST['password'];
     $password2=$_POST['password2'];
-    $conn = new mysqli('localhost','admin','123583','kz');
+    $conn = new mysqli('localhost','alinamust','123583','kuxko');
     $result = $conn->query("SELECT*FROM `users` WHERE `login` = '$login'");
        $user = $result->fetch_assoc();
     $conn = new mysqli('localhost','admin','123583','kz');
@@ -29,7 +29,7 @@
     $password2=md5($password."qwerty11");
 
 
-$conn = new mysqli('localhost','admin','123583','kz');
+$conn = new mysqli('localhost','alinamust','123583','kuxko');
 
   if ($conn->connect_error) {
     die("Ошибка: не удается подключиться: " . $conn->connect_error);
