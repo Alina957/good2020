@@ -1,6 +1,6 @@
 <?php
 $login = $_POST['login'];
-$passWORD = $_POST['password'];
+$password = $_POST['password'];
 
  $password = md5($password."qwerty11");
  $password2 = md5($password2."qwerty11");
