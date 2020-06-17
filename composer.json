@@ -1,0 +1,22 @@
+{
+  "name": "vendor_name/info2020",
+  "description": "description",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Alina",
+      "email": "20000322am@gmail.com"
+    }
+  ],
+  "require": {
+    
+  },
+  "autoload": {
+    "psr-4": {
+
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "7.0"
+  }
+}
