@@ -21,7 +21,7 @@
      <div class="container" mt-4>
         <h1 style= "color: black; text-align:center;"> Форма регистрации </h1>
 
-        <form action = "reg.php" method ="post">
+        <form action = "check.php" method ="post">
           <input type="text" class="form-control" name ="name" id = "name" placeholder="Введите имя"><br>
           <input type="text" class="form-control" name ="login" id = "login" placeholder="Введите логин"><br>
           <input type="text" class="form-control" name ="email" id = "email" placeholder="Введите email"><br>
